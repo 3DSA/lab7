@@ -12,8 +12,7 @@ class ListExamples {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
-        //change result.add(s); -> result.add(0,s);
-        result.add(s);
+        result.add(0,s);
       }
     }
     return result;
@@ -37,13 +36,11 @@ class ListExamples {
     }
     while(index1 < list1.size()) {
       result.add(list1.get(index1));
-      // change index2 below to index1 to fix test
-      index2 += 1;
+      index1 += 1;
     }
     while(index2 < list2.size()) {
       result.add(list2.get(index2));
-      // change index1 below to index2 to fix test
-      index1 += 1;
+      index2 += 1;
     }
     return result;
   }
